@@ -72,8 +72,9 @@ function buildbar(sampleId){
         marker:{
             size: selectedSample['sample_values'].map(sample_value=>sample_value/2),
             color: selectedSample['otu_ids'],
-            colorscale: ['greens']
-        }
+            colorscale: ['greens'],
+            text: selectedSample['otu_labels']
+        },
     };
         Plotly.newPlot('bubble',[traceBubble])
     });
